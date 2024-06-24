@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./estilos/Inicio.css";
+import { FaFacebookF, FaTiktok, FaInstagram, FaTwitter } from "react-icons/fa";
+import mediumImage from "./escudopunata.jpg"; 
 import background1 from "../imagenes/inicio/portada1.jpg";
 import background2 from "../imagenes/inicio/portada2.jpg";
 import background3 from "../imagenes/inicio/portada3.jpg";
@@ -59,6 +61,7 @@ const Inicio = () => {
           {nombrelugar[backgroundImage]}
         </div>
       </div>
+      
     </section>
   );
 };
