@@ -1,0 +1,219 @@
+.vv-wrapper {
+  width: 100%;
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+}
+.e-container {
+    background-image: url('../Fondos/economia.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .im-container {
+    background-image: url('../Fondos/ingresos.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .uc-container {
+    background-image: url('../Fondos/catastro.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .op-container {
+    background-image: url('../Fondos/obraspublicas.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dp-container {
+    background-image: url('../Fondos/planificacion.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ma-container {
+    background-image: url('../Fondos/medioambiente.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dh-container {
+    background-image: url('../Fondos/desarrollohumano.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-containere {
+    background-color: rgba(255, 255, 255, 0.432); 
+    border-radius: 10px; 
+    padding: 10px; 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.719); 
+    display: inline-block;
+    text-align: center;
+    animation: slideIn 5s ease infinite; 
+  }
+  .text-containeree {
+    border-radius: 10px; 
+    padding: 30px; 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.719); 
+    display: inline-block;
+    text-align: center;
+    width: 40%; 
+    margin-left: 5%;
+  }
+  .eco-container {
+    background-color: rgb(255, 255, 255);
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    top: 20%;
+  }
+  .text-large {
+    font-size: 60px; 
+    font-weight: bold; 
+    margin-bottom: 15px; 
+    color: #015f06;
+  }
+  .descre-mision,
+  .descre-vision {
+    background-color: rgba(148, 148, 148, 0.822);
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: justify;
+    border-radius: 10px;
+    padding: 10px; /* Agrega relleno de 10px alrededor del contenido */
+  }
+  .contacto {
+    font-size: 16px;
+    color: #333;
+    display: inline-block;
+    background-color: #f0f0f0; /* Fondo gris claro para el contenedor de contacto */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  }
+  
+  .titulo {
+    font-weight: bold;
+    color: #015f06; /* Verde oscuro para el título */
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .contenido {
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: inline-block;
+    background-color: #ffffff; /* Fondo blanco para el contenido */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  }
+  .boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #015f06; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    z-index: 9999; /* Asegura que el botón esté sobre otros elementos */
+  }
+  
+  .boton-flotante:hover {
+    background-color: #028a07; /* Cambia el color de fondo al pasar el mouse */
+  }
+   
+  
+  
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-50px); /* Comienza fuera de la pantalla */
+      opacity: 0; /* Inicialmente transparente */
+    }
+    50% {
+      opacity: 1; /* Aparece */
+    }
+    100% {
+      transform: translateY(0); /* Se desliza hacia arriba */
+      opacity: 1; /* Totalmente visible */
+    }
+  }
+  @media (max-width: 768px) {
+    .v-wrapper {
+      margin-top: 0; 
+    }
+    .text-large {
+      font-size: 32px; /* Aumento del tamaño del texto grande para dispositivos móviles */
+      margin-bottom: 8px; /* Espaciado inferior */
+    }
+    .e-container {
+        display: flow-root;
+      }
+    .text-containere,
+  .text-containeree {
+    display: block; /* Cambia la visualización a bloque en dispositivos móviles */
+    width: auto; /* Restaura el ancho automático */
+    margin-left: auto; /* Restaura el margen izquierdo automático */
+    margin-right: auto; /* Restaura el margen derecho automático */
+    margin-bottom: 20px; /* Espaciado inferior entre los elementos */
+    padding: 15px; /* Espaciado interior para dispositivos móviles */
+  }
+  
+
+   
+  }
+  

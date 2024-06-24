@@ -1,0 +1,45 @@
+[
+    {
+      "name": "DIRECCION DE ECONOMIA Y FINANZAS",
+      "icon": "FaMoneyBillAlt",
+      "link": "/economiaFinanzas",
+      "detail": "detalles"
+    },
+    {
+      "name": "DIRECCION DE INGRESOS MUNICIPALES",
+      "icon": "FaBalanceScale",
+      "detail": "detalles",
+      "link": "/ingresosMunicipales"
+    },
+    {
+      "name": "DIRECCION DE URBANISMO Y CATASTRO",
+      "icon": "FaCity",
+      "link": "/urbanismoCatastro",
+      "detail": "detalles"
+    },
+    {
+      "name": "DIRECCION DE OBRAS PUBLICAS",
+      "icon": "FaTools",
+      "link": "/obrasPublicas",
+      "detail": "detalles"
+    },
+    {
+      "name": "DIRECCION DE PLANIFICACION",
+      "icon": "FaClipboardList",
+      "link": "/planificacion",
+      "detail": "detalles"
+    },
+    {
+      "name": "DIRECCION DE DESARROLLO PRODUCTIVO Y MEDIO AMBIENTE",
+      "icon": "FaLeaf",
+      "link": "/productividadMedioHambiente",
+      "detail": "detalles"
+    },
+    {
+      "name": "DIRECCION DE DESARROLLO HUMANO",
+      "icon": "FaUser",
+      "link": "/desarrolloHumano",
+      "detail": "desarrollohumano"
+    }
+  ]
+  

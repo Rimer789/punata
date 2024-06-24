@@ -1,0 +1,206 @@
+.v-wrapper {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  
+  }
+  
+  .v-container {
+    background-image: url('../../imagenes/inicio/portada7.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+    height: 120vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .v-container2 {
+    background-color: #0b7a0b;
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .v-container3 {
+    background-color: rgb(255, 255, 255);
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  
+  .alcalde-container {
+    text-align: center;
+  }
+  .escudo-container {
+    text-align: center;
+  }
+  
+  .alcalde-img {
+    border-radius: 50%; 
+    width: 300px; 
+    height: 400px;
+    object-fit: cover; 
+    margin-bottom: 10px;
+    border: 10px double aliceblue;
+  }
+  .escudo-img {
+    border-radius: 50%; 
+    width: 400px; 
+    height: 400px;
+    object-fit: cover; 
+    margin-bottom: 10px;
+    border: 10px double aliceblue;
+  }
+  
+  .alcalde-name {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: aliceblue;
+  }
+  .alcalde-title {
+    color: aliceblue;
+    font-size: 45px;
+    margin-bottom: 10px;
+  }
+  
+  .redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .redes-sociales a {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  .redes-sociales a:hover {
+    color: #000; /* Cambiar color al pasar el cursor */
+  }
+  
+  .text-container {
+    background-color: rgba(255, 255, 255, 0.432); 
+    border-radius: 10px; 
+    padding: 30px; 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.719); 
+    display: inline-block;
+    text-align: center;
+    animation: slideIn 5s ease infinite; 
+  }
+  
+  .text-large {
+    font-size: 60px; 
+    font-weight: bold; 
+    margin-bottom: 15px; 
+    color: #015f06;
+  }
+  
+  .text-small {
+    font-size: 40px; 
+    color: #666; 
+    color: #015f06;
+  
+  }
+  .mision,
+  .vision {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0b7a0b;
+  }
+  
+  .descr-mision,
+  .descr-vision {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: justify;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-50px); /* Comienza fuera de la pantalla */
+      opacity: 0; /* Inicialmente transparente */
+    }
+    50% {
+      opacity: 1; /* Aparece */
+    }
+    100% {
+      transform: translateY(0); /* Se desliza hacia arriba */
+      opacity: 1; /* Totalmente visible */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .v-wrapper {
+      margin-top: 0; 
+    }
+    .text-large {
+      font-size: 32px; /* Aumento del tamaño del texto grande para dispositivos móviles */
+      margin-bottom: 8px; /* Espaciado inferior */
+    }
+  
+    .text-small {
+      font-size: 20px; /* Aumento del tamaño del texto pequeño para dispositivos móviles */
+    }
+  
+    .text-container {
+      padding: 15px; /* Espaciado interior para dispositivos móviles */
+    }
+  
+    .alcalde-img {
+      width: 300px; /* Ajuste del tamaño de la imagen para dispositivos móviles */
+      height: 300px;
+      margin-bottom: 10px;
+      border: 5px double aliceblue; /* Ajuste del borde para dispositivos móviles */
+    }
+    .escudo-img {
+      width: 300px; /* Ajuste del tamaño de la imagen para dispositivos móviles */
+      height: 300px;
+      margin-bottom: 10px;
+      border: 5px double aliceblue; /* Ajuste del borde para dispositivos móviles */
+    }
+  
+    .alcalde-name {
+      font-size: 28px; /* Ajuste del tamaño del nombre del alcalde para dispositivos móviles */
+      margin-bottom: 10px;
+      color: aliceblue;
+    }
+  
+    .alcalde-title {
+      font-size: 32px; /* Ajuste del tamaño del título del alcalde para dispositivos móviles */
+      margin-bottom: 10px;
+      color: aliceblue;
+    }
+    .descr-mision,
+    .descr-vision {
+       font-size: 15px;
+       margin-bottom: 20px;
+       text-align: justify;
+       margin-left: 0px;
+       margin-right: 0px;
+  }
+  }
+  
