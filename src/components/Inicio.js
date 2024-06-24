@@ -45,8 +45,14 @@ const Inicio = () => {
         backgroundPosition: "center",
       }}
     >
+      <head>
+        <title> GOBIERNO AUTÓNOMO MUNICIPAL DE PUNATA</title>
+        <meta name="description" content="Satisfacer las necesidades y aspiraciones de desarrollo de la
+    población del municipio de Punata, direccionando los servicios
+    públicos municipales hacia la mejora de su calidad de vida" />
+      </head>
       <div className="seccion-container">
-        <div className="titulo-inicio">
+        <div className="titu-inicio">
           GOBIERNO AUTÓNOMO <br /> MUNICIPAL DE PUNATA
         </div>
         <div className="nombrelugar">
