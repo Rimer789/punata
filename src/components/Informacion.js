@@ -15,7 +15,7 @@ const Informacion = () => {
           <div className="text-small">Alcaldía de Punata</div>
         </div>
       </div>
-      <div className="v-container2">
+      <div className="v-container2" id="alcalde">
         <div className="alcalde-container">
           <div className="alcalde-title">Nuestro Alcalde</div>
           <img
@@ -40,7 +40,32 @@ const Informacion = () => {
           </a>
         </div>
       </div>
-      <div className="v-container3">
+      <div className="v-container2" id="concejo">
+        <div className="alcalde-container">
+          <div className="alcalde-title">concejo municipal</div>
+          <img
+            src={alcalde}
+            alt="Foto del alcalde" 
+            className="alcalde-img"
+          />
+          <div className="alcalde-name">Lic. Jaime Zeballos Vargas</div>
+        </div>
+        <div className="redes-sociales">
+          <a href="link-de-facebook" target="_blank" rel="noopener noreferrer">
+            <FaFacebookF />
+          </a>
+          <a href="link-de-instagram" target="_blank" rel="noopener noreferrer">
+            <FaInstagram />
+          </a>
+          <a href="link-de-twitter" target="_blank" rel="noopener noreferrer">
+            <FaTwitter />
+          </a>
+          <a href="link-de-tiktok" target="_blank" rel="noopener noreferrer">
+            <FaTiktok />
+          </a>
+        </div>
+      </div>
+      <div className="v-container3" id="mision">
         <div className="escudo-container">
           <img
             src={escudo}

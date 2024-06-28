@@ -175,7 +175,62 @@
   .boton-flotante:hover {
     background-color: #028a07; /* Cambia el color de fondo al pasar el mouse */
   }
-   
+  
+  .director-container {
+    margin-bottom: 20px;
+  }
+  
+  .director-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .pdf-download {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .pdf-download a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .pdf-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .pdf-item {
+    flex: 1;
+    min-width: 200px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pdf-thumbnail {
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .pdf-name {
+    font-size: 1em;
+    font-weight: normal;
+  }
+  
   
   
   

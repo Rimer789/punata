@@ -1,14 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import pdf1 from "./DIRECTOR.pdf";
+import pdf2 from "./PEI.pdf";
+import pdf3 from "./PTDI.pdf";
+import pdf4 from "./POA.pdf";
+import pdf5 from "./AGENDA.pdf";
+import "./Planificacion.css"
 
 const Planificacion = () => {
   return (
     <section id="value" className="v-wrapper">
-     <button className="boton-flotante"><Link to="/direcciones"> atras</Link></button>
+        <Link to="/direcciones">
+      <button className="boton-flotante">atras</button>
+        </Link>
       <div className="dp-container">
         <div className="text-containere">
           <div className="text-large">
-            Direccion de <br /> PLANIFICACION
+            Dirección de <br /> PLANIFICACIÓN
           </div>
         </div>
         <div className="text-containeree">
@@ -29,39 +37,46 @@ const Planificacion = () => {
       </div>
 
       <div className="eco-container">
-        <div className="descr-mision">
-          <strong>Elaboración y gestión del presupuesto:</strong> Responsable de
-          la elaboración del presupuesto municipal, identificando los ingresos
-          proyectados y asignando recursos a diferentes áreas y proyectos
-          municipales de acuerdo con las prioridades establecidas. <br /> <br />
-          <strong>Recaudación de impuestos y tasas:</strong> Encargada de
-          administrar la recaudación de impuestos municipales, como impuestos
-          prediales, impuestos sobre vehículos y tasas por servicios
-          municipales, garantizando una gestión eficiente y transparente de los
-          ingresos municipales. <br /> <br />
-          <strong>Control y contabilidad:</strong> Realiza un seguimiento
-          detallado de los ingresos y gastos municipales mediante sistemas
-          contables adecuados, asegurando la transparencia y la rendición de
-          cuentas en el manejo de los fondos públicos. <br /> <br />
-          <strong>Gestión financiera:</strong> Administra de manera prudente los
-          recursos financieros municipales, incluida la gestión de activos
-          líquidos y la planificación financiera a largo plazo para garantizar
-          la estabilidad económica y financiera del municipio. <br /> <br />
-          <strong>Apoyo a proyectos de desarrollo económico:</strong> Colabora
-          en la identificación y promoción de proyectos que impulsen el
-          desarrollo económico local, como la atracción de inversiones y el
-          fomento del emprendimiento. <br /> <br />
-          <strong>Coordinación interdepartamental:</strong> Trabaja en estrecha
-          colaboración con otros departamentos municipales para garantizar una
-          gestión integrada y eficiente de los recursos en áreas como
-          planificación urbana, servicios públicos y desarrollo comunitario.{" "}
-          <br /> <br />º<strong>Cumplimiento normativo y reportes:</strong>{" "}
-          Asegura el cumplimiento de las regulaciones financieras y contables
-          aplicables y proporciona informes financieros precisos y oportunos a
-          las autoridades correspondientes y al público en general.
+        <div className="director-container">
+          <div className="director-name">
+            Lic. Waldo Héctor Requis Rojas <br />
+            DIRECTOR DE PLANIFICACIÓN <br />
+            GOBIERNO AUTÓNOMO MUNICIPAL DE PUNATA
+          </div>
+          <div className="pdf-itemr ">
+            <a href={pdf1} target="_blank" rel="noopener noreferrer">
+              <div className="pdf-thumbnail pdf-thumbnail-1">PDF</div>
+              <div className="pdf-name">BIBLIOGRAFIA</div>
+            </a>
+          </div>
+        </div>
+        <div className="pdf-grid">
+          <div className="pdf-item ">
+            <a href={pdf2} target="_blank" rel="noopener noreferrer">
+              <div className="pdf-thumbnail pdf-thumbnail-2">PDF</div>
+              <div className="pdf-name">PLAN ESTRATÉGICO INSTITUCIONAL DEL MUNICIPIO DE PUNATA 2021-2025</div>
+            </a>
+          </div>
+          <div className="pdf-item ">
+            <a href={pdf3} target="_blank" rel="noopener noreferrer">
+              <div className="pdf-thumbnail pdf-thumbnail-3">PDF</div>
+              <div className="pdf-name">PLAN TERRITORIAL DE DESARROLLO INTEGRAL PARA VIVIR BIEN DEL MUNICIPIO DE PUNATA 2021-2025</div>
+            </a>
+          </div>
+          <div className="pdf-item ">
+            <a href={pdf4} target="_blank" rel="noopener noreferrer">
+              <div className="pdf-thumbnail pdf-thumbnail-4">PDF</div>
+              <div className="pdf-name">PLAN OPERATIVO ANUAL GESTIÓN 2024</div>
+            </a>
+          </div>
+          <div className="pdf-item">
+            <a href={pdf5} target="_blank" rel="noopener noreferrer">
+              <div className="pdf-thumbnail pdf-thumbnail-5">PDF</div>
+              <div className="pdf-name">AGENDA URBANA PUNATA</div>
+            </a>
+          </div>
         </div>
       </div>
-
     </section>
   );
 };

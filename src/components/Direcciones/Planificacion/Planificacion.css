@@ -1,0 +1,125 @@
+.eco-container {
+    background-color: #032336;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .director-container {
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .director-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(109, 102, 102, 0.644);
+    color: #000;
+  }
+  
+  .pdf-download {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .pdf-download a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  .pdf-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #2d6137;
+    border-radius: 10px;
+  }
+  
+  .pdf-item {
+    flex: 1 1 calc(25% - 20px);
+    min-width: 200px;
+    max-width: 250px;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+    .pdf-itemr {
+    flex: 1 1 calc(25% - 20px);
+    min-width: 200px;
+    max-width: 250px;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 20px solid #2d6137; 
+  }
+  
+  .pdf-item::before {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+  }
+  
+  
+  
+  .pdf-thumbnail{
+    height: 150px;
+    content: "";
+    background-size: cover;
+    background-position: center;    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .pdf-thumbnail-1 {
+    background-image: url('./director.jpg');
+  }
+  
+  .pdf-thumbnail-2 {
+    background-image: url('./pei.jpg');
+  }
+  
+  .pdf-thumbnail-3 {
+    background-image: url('./ptdi.jpg');
+  }
+  
+  .pdf-thumbnail-4 {
+    background-image: url('./poa.jpg');
+  }
+  .pdf-thumbnail-5 {
+    background-image: url('./agenda.jpg');
+  }
+  
+  .pdf-name {
+    font-size: 1.1em;
+    font-weight: normal;
+    position: relative;
+    z-index: 1;
+    color: #000;
+  }

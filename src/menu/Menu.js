@@ -1,7 +1,6 @@
 import { Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import Inicio from '../components/Inicio';
-import "../menu/menu.css";
 import Informacion from '../components/Informacion';
 import Direcciones from '../components/Direcciones';
 import CulTuris from '../components/CulTuris';
@@ -31,11 +30,13 @@ import Rosquete from '../components/culturas/Rosquete/Rosquete';
 import Chicha from '../components/culturas/Chicha/Chicha';
 import Cusqueno from '../components/culturas/Cusqueno/Cusqueno';
 import GestionTransparente from '../components/GestionTransparente';
-
+import './menu.css';
+import ScrollTop from './ScrollTop';
 
 const Menu = () => {
     const [menuActive, setMenuActive] = useState(false);
     const [isNavFixed, setIsNavFixed] = useState(false);
+    const [dropdownActive, setDropdownActive] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -43,17 +44,27 @@ const Menu = () => {
         setMenuActive(!menuActive);
     };
 
+    const toggleDropdown = () => {
+        setDropdownActive(!dropdownActive);
+    };
+
     const handleLinkClick = (path) => {
         setMenuActive(false);
         navigate(path);
     };
-
+    const handleAnchorClick = (event, id) => {
+        event.preventDefault();
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     useEffect(() => {
         let prevScrollPos = window.scrollY;
 
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            const nav = document.querySelector('.menu');
+            const nav = document.querySelector('.navbar');
 
             if (scrollPosition > prevScrollPos) {
                 // Oculta el menú al hacer scroll hacia abajo
@@ -75,72 +86,87 @@ const Menu = () => {
 
     return (
         <>
-            <div style={{ marginBottom: isNavFixed ? '60px' : '0' }}>
-            </div>
-            <nav className={`menu ${menuActive || isNavFixed ? 'active' : ''}`}>
-                <div className="hamburger-icon" onClick={toggleMenu}>
+            <div style={{ marginBottom: isNavFixed ? '60px' : '0' }}></div>
+            <nav className={`navbar ${menuActive || isNavFixed ? 'active' : ''}`}>
+                <div className="navbar__hamburger" onClick={toggleMenu}>
                     &#9776;
                 </div>
-                <ul>
-                    <li className={location.pathname === '/' ? 'active' : ''} onClick={() => handleLinkClick('/')}>
-                        <Link to="/">INICIO</Link>
+                <ul className="navbar__menu">
+                    <li className={`navbar__item ${location.pathname === '/' ? 'active' : ''}`} onClick={() => handleLinkClick('/')}>
+                        <Link to="/" className="navbar__link">INICIO</Link>
                     </li>
-                    <li className={location.pathname === '/informacion' ? 'active' : ''} onClick={() => handleLinkClick('/informacion')}>
-                        <Link to="/informacion">GOBIERNO MUNICIPAL</Link>
+                    <li className={`navbar__item ${location.pathname.startsWith('/informacion') ? 'active' : ''}`} onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
+                        <Link to="/informacion" className="navbar__link">GOBIERNO MUNICIPAL</Link>
+                        <ul className={`navbar__dropdown ${dropdownActive ? 'active' : ''}`}>
+                            <li className="navbar__dropdown-item">
+                                <Link to="/informacion" className="navbar__dropdown-link" onClick={(e) => handleAnchorClick(e, 'alcalde')}>Alcalde</Link>
+                            </li>
+                            <li className="navbar__dropdown-item">
+                                <Link to="/informacion" className="navbar__dropdown-link" onClick={(e) => handleAnchorClick(e, 'concejo')}>Concejo</Link>
+                            </li>
+                            <li className="navbar__dropdown-item">
+                                <Link to="/informacion" className="navbar__dropdown-link" onClick={(e) => handleAnchorClick(e, 'mision')}>Misión</Link>
+                            </li>
+                            <li className="navbar__dropdown-item">
+                                <Link to="/informacion" className="navbar__dropdown-link" onClick={(e) => handleAnchorClick(e, 'vision')}>Visión</Link>
+                            </li>
+                        </ul>
                     </li>
-                    <li className={location.pathname === '/direcciones' ? 'active' : ''} onClick={() => handleLinkClick('/direcciones')}>
-                        <Link to="/direcciones">DIRECCIONES MUNICIPALES</Link>
+                    <li className={`navbar__item ${location.pathname === '/direcciones' ? 'active' : ''}`} onClick={() => handleLinkClick('/direcciones')}>
+                        <Link to="/direcciones" className="navbar__link">DIRECCIONES MUNICIPALES</Link>
                     </li>
-                    <li className={location.pathname === '/gestionTransparente' ? 'active' : ''} onClick={() => handleLinkClick('/gestionTransparente')}>
-                        <Link to='/gestionTransparente'>GESTION TRANSPARENTE</Link>
+                    <li className={`navbar__item ${location.pathname === '/gestionTransparente' ? 'active' : ''}`} onClick={() => handleLinkClick('/gestionTransparente')}>
+                        <Link to='/gestionTransparente' className="navbar__link">GESTIÓN TRANSPARENTE</Link>
                     </li>
-                    <li className={location.pathname === '/culturaturismo' ? 'active' : ''} onClick={() => handleLinkClick('/culturaturismo')}>
-                        <Link to='/contactos'>CULTURA Y TURISMO</Link>
+                    <li className={`navbar__item ${location.pathname === '/culturaturismo' ? 'active' : ''}`} onClick={() => handleLinkClick('/culturaturismo')}>
+                        <Link to='/culturaturismo' className="navbar__link">CULTURA Y TURISMO</Link>
                     </li>
-                    <li className={location.pathname === '/gastronomia' ? 'active' : ''} onClick={() => handleLinkClick('/gastronomia')}>
-                        <Link to='/gastronomia'>SERVICIO DE RESTAURANTES</Link>
+                    <li className={`navbar__item ${location.pathname === '/gastronomia' ? 'active' : ''}`} onClick={() => handleLinkClick('/gastronomia')}>
+                        <Link to='/gastronomia' className="navbar__link">SERVICIO DE RESTAURANTES</Link>
                     </li>
-                    <li className={location.pathname === '/noticias' ? 'active' : ''} onClick={() => handleLinkClick('/noticas')}>
-                        <Link to='/noticias'>NOTICIAS</Link>
+                    <li className={`navbar__item ${location.pathname === '/noticias' ? 'active' : ''}`} onClick={() => handleLinkClick('/noticias')}>
+                        <Link to='/noticias' className="navbar__link">NOTICIAS</Link>
                     </li>
-                    
-
                 </ul>
             </nav>
+            <ScrollTop/>
             <div>
                 <Routes>
                     <Route path="/" element={<Inicio />} />
-                    <Route path="/informacion" element={<Informacion/>}/>
-                    <Route path="/direcciones" element={<Direcciones/>}/>
-                    <Route path='/culturaturismo' element={<CulTuris/>}/>
-                    <Route path='/gastronomia' element={<Gastronomia/>}/>
-                    <Route path='/noticas' element={<Noticias/>}/>
-                    <Route path='/desarrolloHumano' element={<DesarrolloHumano/>}/>
-                    <Route path='/economiaFinanzas' element={<Economia/>}/>
-                    <Route path='/ingresosMunicipales' element={<IngresoMunicipal/>}/>
-                    <Route path='/obrasPublicas' element={<ObrasPublicas/>}/>
-                    <Route path='/planificacion' element={<Planificacion/>}/>
-                    <Route path='/productividadMedioHambiente' element={<MedioAmbiente/>}/>
-                    <Route path='/urbanismoCatastro' element={<UrbanismoCatastro/>}/>
-                    <Route path='/cementerio' element={<Cementerio/>}/>
-                    <Route path='/era' element={<Era/>}/>
-                    <Route path='/sivingani' element={<Sivingani/>}/>
-                    <Route path='/villa' element={<Villa/>}/>
-                    <Route path='/cantaritos' element={<Cantaritos/>}/>
-                    <Route path='/kjaras' element={<Kjaras/>}/>
-                    <Route path='/archis' element={<Archis/>}/>
-                    <Route path='/llajta' element={<LLajta/>}/>
-                    <Route path='/poblado' element={<Poblado/>}/>
-                    <Route path='/aurora' element={<Aurora/>}/>
-                    <Route path='/pakayhuasi' element={<Huasi/>}/>
-                    <Route path='/hermanos' element={<Hermanos/>}/>
-                    <Route path='/jotita' element={<Jotita/>}/>
-                    <Route path='/rosquete' element={<Rosquete/>}/>
-                    <Route path='/chicha' element={<Chicha/>}/>
-                    <Route path='/cusqueno' element={<Cusqueno/>}/>
-                    <Route path='/gestionTransparente' element={<GestionTransparente/>}/>
+                    <Route path="/informacion" element={<Informacion />} />
+                    <Route path="/informacion/alcalde" element={<div>Alcalde</div>} />
+                    <Route path="/informacion/concejo" element={<div>Concejo</div>} />
+                    <Route path="/informacion/mision" element={<div>Misión</div>} />
+                    <Route path="/informacion/vision" element={<div>Visión</div>} />
+                    <Route path="/direcciones" element={<Direcciones />} />
+                    <Route path='/culturaturismo' element={<CulTuris />} />
+                    <Route path='/gastronomia' element={<Gastronomia />} />
+                    <Route path='/noticias' element={<Noticias />} />
+                    <Route path='/desarrolloHumano' element={<DesarrolloHumano />} />
+                    <Route path='/economiaFinanzas' element={<Economia />} />
+                    <Route path='/ingresosMunicipales' element={<IngresoMunicipal />} />
+                    <Route path='/obrasPublicas' element={<ObrasPublicas />} />
+                    <Route path='/planificacion' element={<Planificacion />} />
+                    <Route path='/productividadMedioHambiente' element={<MedioAmbiente />} />
+                    <Route path='/urbanismoCatastro' element={<UrbanismoCatastro />} />
+                    <Route path='/cementerio' element={<Cementerio />} />
+                    <Route path='/era' element={<Era />} />
+                    <Route path='/sivingani' element={<Sivingani />} />
+                    <Route path='/villa' element={<Villa />} />
+                    <Route path='/cantaritos' element={<Cantaritos />} />
+                    <Route path='/kjaras' element={<Kjaras />} />
+                    <Route path='/archis' element={<Archis />} />
+                    <Route path='/llajta' element={<LLajta />} />
+                    <Route path='/poblado' element={<Poblado />} />
+                    <Route path='/aurora' element={<Aurora />} />
+                    <Route path='/pakayhuasi' element={<Huasi />} />
+                    <Route path='/hermanos' element={<Hermanos />} />
+                    <Route path='/jotita' element={<Jotita />} />
+                    <Route path='/rosquete' element={<Rosquete />} />
+                    <Route path='/chicha' element={<Chicha />} />
+                    <Route path='/cusqueno' element={<Cusqueno />} />
+                    <Route path='/gestionTransparente' element={<GestionTransparente />} />
                 </Routes>
-                
             </div>
         </>
     );
