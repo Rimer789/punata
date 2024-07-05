@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import "./estilos/Inicio.css";
-import { FaFacebookF, FaTiktok, FaInstagram, FaTwitter } from "react-icons/fa";
-import mediumImage from "./escudopunata.jpg"; 
 import background1 from "../imagenes/inicio/portada1.jpg";
 import background2 from "../imagenes/inicio/portada2.jpg";
 import background3 from "../imagenes/inicio/portada3.jpg";
@@ -47,12 +46,10 @@ const Inicio = () => {
         backgroundPosition: "center",
       }}
     >
-      <head>
-        <title> GOBIERNO AUTÓNOMO MUNICIPAL DE PUNATA</title>
-        <meta name="description" content="Satisfacer las necesidades y aspiraciones de desarrollo de la
-    población del municipio de Punata, direccionando los servicios
-    públicos municipales hacia la mejora de su calidad de vida" />
-      </head>
+      <Helmet>
+        <title>Gobierno Autónomo Municipal De Punata</title>
+        <meta name="description" content="Satisfacer las necesidades y aspiraciones de desarrollo de la población del municipio de Punata, direccionando los servicios públicos municipales hacia la mejora de su calidad de vida" />
+      </Helmet>
       <div className="seccion-container">
         <div className="titu-inicio">
           GOBIERNO AUTÓNOMO <br /> MUNICIPAL DE PUNATA
@@ -61,7 +58,6 @@ const Inicio = () => {
           {nombrelugar[backgroundImage]}
         </div>
       </div>
-      
     </section>
   );
 };
