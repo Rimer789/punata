@@ -83,7 +83,7 @@ const Gastronomia = () => {
       <div className="dividir"> 
         <div className="footer-section">
           <div className="title">Gobierno Autónomo Municipal de Punata</div>
-          <div className="description">Oficina central: Calle Sucre entre calle Antofagasta y calle Rafael Urquidi</div>
+          <div className="description">Oficina central: Plaza Principal 18 de Mayo, Acera Norte </div>
           <div className="description">Lunes-Viernes, de 8:00 AM a 12:00 PM y de 1:30 PM a 5:30 PM</div>
         </div>
         <div className="image-container">

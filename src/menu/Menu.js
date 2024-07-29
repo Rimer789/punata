@@ -30,13 +30,17 @@ import Rosquete from '../components/culturas/Rosquete/Rosquete';
 import Chicha from '../components/culturas/Chicha/Chicha';
 import Cusqueno from '../components/culturas/Cusqueno/Cusqueno';
 import GestionTransparente from '../components/GestionTransparente';
+import Servicios from '../components/ServiciosSociales';
 import './menu.css';
 import ScrollTop from './ScrollTop';
+import Slim from '../components/Direcciones/DesarrolloHumano/Slim';
+import Coslam from '../components/Direcciones/DesarrolloHumano/Coslam';
 
 const Menu = () => {
     const [menuActive, setMenuActive] = useState(false);
     const [isNavFixed, setIsNavFixed] = useState(false);
     const [dropdownActive, setDropdownActive] = useState(false);
+    const [dropdownDireccionesActive, setDropdownDireccionesActive] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -48,10 +52,15 @@ const Menu = () => {
         setDropdownActive(!dropdownActive);
     };
 
+    const toggleDropdownDirecciones = () => {
+        setDropdownDireccionesActive(!dropdownDireccionesActive);
+    };
+
     const handleLinkClick = (path) => {
         setMenuActive(false);
         navigate(path);
     };
+
     const handleAnchorClick = (event, id) => {
         event.preventDefault();
         const element = document.getElementById(id);
@@ -59,6 +68,7 @@ const Menu = () => {
             element.scrollIntoView({ behavior: 'smooth' });
         }
     };
+
     useEffect(() => {
         let prevScrollPos = window.scrollY;
 
@@ -85,12 +95,13 @@ const Menu = () => {
     }, []);
 
     return (
-        <>
+        <header>
             <div style={{ marginBottom: isNavFixed ? '60px' : '0' }}></div>
             <nav className={`navbar ${menuActive || isNavFixed ? 'active' : ''}`}>
                 <div className="navbar__hamburger" onClick={toggleMenu}>
                     &#9776;
                 </div>
+                <h3>G.A.M.P.</h3>
                 <ul className="navbar__menu">
                     <li className={`navbar__item ${location.pathname === '/' ? 'active' : ''}`} onClick={() => handleLinkClick('/')}>
                         <Link to="/" className="navbar__link">INICIO</Link>
@@ -105,15 +116,41 @@ const Menu = () => {
                                 <Link to="/informacion" className="navbar__dropdown-link" onClick={(e) => handleAnchorClick(e, 'concejo')}>Concejo</Link>
                             </li>
                             <li className="navbar__dropdown-item">
-                                <Link to="/informacion" className="navbar__dropdown-link" onClick={(e) => handleAnchorClick(e, 'mision')}>Misión</Link>
+                                <Link to="/informacion" className="navbar__dropdown-link" onClick={(e) => handleAnchorClick(e, 'mision')}>Misión Vision</Link>
                             </li>
                             <li className="navbar__dropdown-item">
-                                <Link to="/informacion" className="navbar__dropdown-link" onClick={(e) => handleAnchorClick(e, 'vision')}>Visión</Link>
+                                <Link to="/informacion" className="navbar__dropdown-link" onClick={(e) => handleAnchorClick(e, 'estrategia')}>Planificacion y estrategia</Link>
                             </li>
                         </ul>
                     </li>
-                    <li className={`navbar__item ${location.pathname === '/direcciones' ? 'active' : ''}`} onClick={() => handleLinkClick('/direcciones')}>
-                        <Link to="/direcciones" className="navbar__link">DIRECCIONES MUNICIPALES</Link>
+                    <li className={`navbar__item ${location.pathname.startsWith('/direcciones') ? 'active' : ''}`} onMouseEnter={toggleDropdownDirecciones} onMouseLeave={toggleDropdownDirecciones}>
+                        <Link to="/direcciones" className="navbar__link">DIRECCIONES</Link>
+                        <ul className={`navbar__dropdown ${dropdownDireccionesActive ? 'active' : ''}`}>
+                            <li className="navbar__dropdown-item">
+                                <Link to="/desarrolloHumano" className="navbar__dropdown-link">Desarrollo Humano</Link>
+                            </li>
+                            <li className="navbar__dropdown-item">
+                                <Link to="/ingresosMunicipales" className="navbar__dropdown-link">Ingresos Municipales</Link>
+                            </li>
+                            <li className="navbar__dropdown-item">
+                                <Link to="/economiaFinanzas" className="navbar__dropdown-link">Economía y Finanzas</Link>
+                            </li>
+                            <li className="navbar__dropdown-item">
+                                <Link to="/obrasPublicas" className="navbar__dropdown-link">Obras Públicas</Link>
+                            </li>
+                            <li className="navbar__dropdown-item">
+                                <Link to="/planificacion" className="navbar__dropdown-link">Planificación</Link>
+                            </li>
+                            <li className="navbar__dropdown-item">
+                                <Link to="/productividadMedioHambiente" className="navbar__dropdown-link">Productividad y Medio Ambiente</Link>
+                            </li>
+                            <li className="navbar__dropdown-item">
+                                <Link to="/urbanismoCatastro" className="navbar__dropdown-link">Urbanismo y Catastro</Link>
+                            </li>
+                        </ul>
+                    </li>
+                    <li className={`navbar__item ${location.pathname === '/ServiciosSociales' ? 'active' : ''}`} onClick={() => handleLinkClick('/ServiciosSociales')}>
+                        <Link to='/ServiciosSociales' className="navbar__link">SERVICIOS SOCIALES</Link>
                     </li>
                     <li className={`navbar__item ${location.pathname === '/gestionTransparente' ? 'active' : ''}`} onClick={() => handleLinkClick('/gestionTransparente')}>
                         <Link to='/gestionTransparente' className="navbar__link">GESTIÓN TRANSPARENTE</Link>
@@ -129,7 +166,7 @@ const Menu = () => {
                     </li>
                 </ul>
             </nav>
-            <ScrollTop/>
+            <ScrollTop />
             <div>
                 <Routes>
                     <Route path="/" element={<Inicio />} />
@@ -166,9 +203,14 @@ const Menu = () => {
                     <Route path='/chicha' element={<Chicha />} />
                     <Route path='/cusqueno' element={<Cusqueno />} />
                     <Route path='/gestionTransparente' element={<GestionTransparente />} />
+                    <Route path='/ServiciosSociales' element={<Servicios/>} />
+                    <Route path='/slim' element={<Slim/>} />
+                    <Route path='/coslam' element={<Coslam/>} />
+
+
                 </Routes>
             </div>
-        </>
+        </header>
     );
 };
 

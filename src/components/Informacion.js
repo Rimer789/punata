@@ -5,6 +5,10 @@ import alcalde from "../imagenes/alcaldia/alcalde.JPG";
 import escudo from "../imagenes/alcaldia/escudopunata.jpg";
 import { FaFacebookF, FaTiktok, FaInstagram, FaTwitter } from "react-icons/fa";
 import mediumImage from "./escudopunata.jpg";
+import pdf2 from "../components/Direcciones/Planificacion/PEI.pdf";
+import pdf3 from "../components/Direcciones/Planificacion/PTDI.pdf";
+import pdf4 from "../components/Direcciones/Planificacion/POA.pdf";
+import pdf5 from "../components/Direcciones/Planificacion/AGENDA.pdf";
 
 const Informacion = () => {
   return (
@@ -44,29 +48,39 @@ const Informacion = () => {
           </a>
         </div>
       </div>
-      <div className="v-container2" id="concejo">
+      <div className="v-container22" id="concejo">
         <div className="alcalde-container">
           <div className="alcalde-title">Concejo Municipal</div>
           <img
             src={alcalde}
             alt="Foto del alcalde"
-            className="alcalde-img"
+            className="concejo-img"
           />
-          <div className="alcalde-name">Lic. Jaime Zeballos Vargas</div>
-        </div>
-        <div className="redes-sociales">
-          <a href="link-de-facebook" target="_blank" rel="noopener noreferrer">
-            <FaFacebookF />
-          </a>
-          <a href="link-de-instagram" target="_blank" rel="noopener noreferrer">
-            <FaInstagram />
-          </a>
-          <a href="link-de-twitter" target="_blank" rel="noopener noreferrer">
-            <FaTwitter />
-          </a>
-          <a href="link-de-tiktok" target="_blank" rel="noopener noreferrer">
-            <FaTiktok />
-          </a>
+          <img
+            src={alcalde}
+            alt="Foto del alcalde"
+            className="concejo-img"
+          />
+          <img
+            src={alcalde}
+            alt="Foto del alcalde"
+            className="concejo-img"
+          />
+          <img
+            src={alcalde}
+            alt="Foto del alcalde"
+            className="concejo-img"
+          />
+          <img
+            src={alcalde}
+            alt="Foto del alcalde"
+            className="concejo-img"
+          />
+          <img
+            src={alcalde}
+            alt="Foto del alcalde"
+            className="concejo-img"
+          />
         </div>
       </div>
       <div className="v-container3" id="mision">
@@ -97,11 +111,40 @@ const Informacion = () => {
           y la prosperidad de Punata.
         </div>
       </div>
+      <div className="v-container33" id="estrategia">
+        <div className="estrategia">Planificacion y estrategia municipal</div>
+        <div className="pdf-grid">
+          <div className="pdf-item ">
+            <a href={pdf2} target="_blank" rel="noopener noreferrer">
+              <div className="pdf-thumbnail pdf-thumbnail-2">PDF</div>
+              <div className="pdf-name">PLAN ESTRATÉGICO INSTITUCIONAL DEL MUNICIPIO DE PUNATA 2021-2025</div>
+            </a>
+          </div>
+          <div className="pdf-item ">
+            <a href={pdf3} target="_blank" rel="noopener noreferrer">
+              <div className="pdf-thumbnail pdf-thumbnail-3">PDF</div>
+              <div className="pdf-name">PLAN TERRITORIAL DE DESARROLLO INTEGRAL PARA VIVIR BIEN DEL MUNICIPIO DE PUNATA 2021-2025</div>
+            </a>
+          </div>
+          <div className="pdf-item ">
+            <a href={pdf4} target="_blank" rel="noopener noreferrer">
+              <div className="pdf-thumbnail pdf-thumbnail-4">PDF</div>
+              <div className="pdf-name">PLAN OPERATIVO ANUAL GESTIÓN 2024</div>
+            </a>
+          </div>
+          <div className="pdf-item">
+            <a href={pdf5} target="_blank" rel="noopener noreferrer">
+              <div className="pdf-thumbnail pdf-thumbnail-5">PDF</div>
+              <div className="pdf-name">AGENDA URBANA PUNATA</div>
+            </a>
+          </div>
+        </div>
+      </div>
       <footer className="f-wrapper">
         <div className="dividir">
           <div className="footer-section">
             <div className="title">Gobierno Autónomo Municipal de Punata</div>
-            <div className="description">Oficina central: Calle Sucre entre calle Antofagasta y calle Rafael Urquidi</div>
+            <div className="description">Oficina central: Plaza Principal 18 de Mayo, Acera Norte </div>
             <div className="description">Lunes-Viernes, de 8:00 AM a 12:00 PM y de 1:30 PM a 5:30 PM</div>
           </div>
           <div className="image-container">

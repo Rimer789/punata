@@ -10,9 +10,9 @@ import "./Planificacion.css"
 const Planificacion = () => {
   return (
     <section id="value" className="v-wrapper">
-        <Link to="/direcciones">
-      <button className="boton-flotante">atras</button>
-        </Link>
+      <Link to="/direcciones">
+        <button className="boton-flotante">atras</button>
+      </Link>
       <div className="dp-container">
         <div className="text-containere">
           <div className="text-large">
@@ -21,11 +21,7 @@ const Planificacion = () => {
         </div>
         <div className="text-containeree">
           <div className="descre-mision">
-            La Dirección de Economía y Finanzas de la Alcaldía de Punata es
-            responsable de establecer políticas fiscales y financieras para el
-            municipio, así como de promover mejoras en los procesos operativos y
-            administrativos relacionados con las finanzas públicas. Sus
-            funciones incluyen:{" "}
+            Es la instancia técnica encargado de planificar, dirigir, evaluar, coordinar y programar las actividades de la Dirección, en la actualización del PTDI, PEI, POA  y la realización de estudios y elaboración de proyectos finales que contribuyan al desarrollo Municipal:{" "}
           </div>
           <div className="contacto">
             <p className="titulo">Teléfono:</p>
@@ -49,7 +45,20 @@ const Planificacion = () => {
               <div className="pdf-name">BIBLIOGRAFIA</div>
             </a>
           </div>
+          <br />
+          <br />
         </div>
+        <div className="descre-p">
+            Dirección de Planificación     <br /><br />
+            Es responsable de:<br /><br />
+            •	Dirigir la elaboración y actualización de planes municipales de mediano y largo plazo (PTDI, PEI, POA y OTROS) en cumplimiento a la planificación municipal y normativa vigente.<br /><br />
+            •	Realizar la identificación, selección, factibilidad y preparación de proyectos de desarrollo municipal, sobre la base de normas, procedimientos y criterios establecidos para este propósito.<br /><br />
+            •	Participar en la elaboración de la matriz de proyectos de Inversión Pública del Plan Operativo Anual en coordinación con el/la responsable de SISIN WEB.<br /><br />
+            •	Coordinar de forma oportuna y eficiente las actividades y/o trabajo con las demás unidades dependientes del Gobierno Autónomo Municipal de Punata a objeto de tomar acciones técnicas, legales y/o administrativas concernientes a los intereses de la Institución.<br /><br />
+            •	Generar información gerencial en base al SIGEP, SISIN WEB Y SICOES.<br />
+
+          </div>
+        <div className="mision">Planificacion y estrategia de Gobierno Autónomo municipal de Punata</div>
         <div className="pdf-grid">
           <div className="pdf-item ">
             <a href={pdf2} target="_blank" rel="noopener noreferrer">

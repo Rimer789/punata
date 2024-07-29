@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import { sliderSettings } from "./common";
 import { FaFacebookF, FaTiktok, FaInstagram, FaTwitter } from "react-icons/fa";
 import mediumImage from "./escudopunata.jpg"; 
+import pdf4 from "./ORGANIGRAMA2024.pdf";
+
 
 const icons = [
   <FaMoneyBillAlt />,
@@ -33,11 +35,11 @@ const Direcciones = () => {
     }
   };
   return (
-    <div id="contact-us" className="dir-wrapper">
+    <div id="organigrama" className="dir-wrapper">
       <br/>
       <br/>
       <br/>
-      <div className="dir-container">
+      <div id="organigrama" className="dir-container">
         <div className="dir-header">
           <span className="dir-title">ORGANIGRAMA 2024 GAM PUNATA</span>
         </div>
@@ -54,8 +56,13 @@ const Direcciones = () => {
             }}
           />
         </div>
+        <div className="pdf-org ">
+            <a href={pdf4} target="_blank" rel="noopener noreferrer">
+              Ver Organigrama
+            </a>
+          </div>
       </div>
-      <div className="dir-content">
+      <div id="organigrama" className="dir-content">
         <div className="dir-header">
           <span className="dir-title">DIRECCIONES MUNICIPALES</span>
         </div>
@@ -77,7 +84,7 @@ const Direcciones = () => {
       <div className="dividir"> 
         <div className="footer-section">
           <div className="title">Gobierno Autónomo Municipal de Punata</div>
-          <div className="description">Oficina central: Calle Sucre entre calle Antofagasta y calle Rafael Urquidi</div>
+          <div className="description">Oficina central: Plaza Principal 18 de Mayo, Acera Norte </div>
           <div className="description">Lunes-Viernes, de 8:00 AM a 12:00 PM y de 1:30 PM a 5:30 PM</div>
         </div>
         <div className="image-container">

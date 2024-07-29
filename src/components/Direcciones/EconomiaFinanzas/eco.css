@@ -91,7 +91,6 @@
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.719); 
     display: inline-block;
     text-align: center;
-    animation: slideIn 5s ease infinite; 
   }
   .text-containeree {
     border-radius: 10px; 
@@ -123,7 +122,7 @@
   }
   .descre-mision,
   .descre-vision {
-    background-color: rgba(148, 148, 148, 0.822);
+    background-color: rgba(255, 255, 255, 0.822);
     font-size: 18px;
     margin-bottom: 20px;
     text-align: justify;

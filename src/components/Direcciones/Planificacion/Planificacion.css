@@ -1,5 +1,5 @@
 .eco-container {
-    background-color: #032336;
+    background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -19,8 +19,17 @@
     margin-bottom: 15px;
     padding: 20px;
     border-radius: 20px;
-    background-color: rgba(109, 102, 102, 0.644);
-    color: #000;
+    background-color: #006400;
+    color: #ffffff;
+  }
+  .descre-p {
+    background-color: rgba(255, 255, 255, 0.822);
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: justify;
+    border-radius: 10px;
+    width: 900px;
+    padding: 10px; /* Agrega relleno de 10px alrededor del contenido */
   }
   
   .pdf-download {
@@ -71,7 +80,25 @@
     position: relative;
     border: 20px solid #2d6137; 
   }
-  
+  .pdf-org {
+    flex: 1 1 calc(25% - 20px);
+    background-color: #006400;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 150px;
+    align-items: center;
+    align-content: center;
+    margin-left: 45%;
+  }
+
+  a{
+  color: #ffffff;
+  }
+
   .pdf-item::before {
     content: "";
     top: 0;

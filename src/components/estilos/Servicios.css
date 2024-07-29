@@ -1,0 +1,81 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  /* Contenedor principal */
+  .v-wrapper {
+    padding: 0px;
+  }
+  
+  .v-containerSer {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  /* Estilo de servicios */
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .service-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    height: 300px; /* Fijar altura para igualar cuadros */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .service-icon {
+    font-size: 36px;
+    color: #009688;
+    margin-bottom: 10px;
+  }
+  
+  .service-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .service-card p {
+    font-size: 14px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Mostrar solo 3 líneas */
+    -webkit-box-orient: vertical;
+  }
+  
+  .read-more {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  /* Otros estilos */
+  .footer-section {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    text-align: center;
+  }
+  
