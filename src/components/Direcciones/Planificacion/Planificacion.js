@@ -9,7 +9,7 @@ import "./Planificacion.css"
 
 const Planificacion = () => {
   return (
-    <section id="value" className="v-wrapper">
+    <section id="value" className="v-wrapperp">
       <Link to="/direcciones">
         <button className="boton-flotante">atras</button>
       </Link>
@@ -32,7 +32,7 @@ const Planificacion = () => {
         </div>
       </div>
 
-      <div className="eco-container">
+      <div className="additional-content-ingre">
         <div className="director-container">
           <div className="director-name">
             Lic. Waldo Héctor Requis Rojas <br />
@@ -49,14 +49,15 @@ const Planificacion = () => {
           <br />
         </div>
         <div className="descre-p">
-            Dirección de Planificación     <br /><br />
-            Es responsable de:<br /><br />
-            •	Dirigir la elaboración y actualización de planes municipales de mediano y largo plazo (PTDI, PEI, POA y OTROS) en cumplimiento a la planificación municipal y normativa vigente.<br /><br />
-            •	Realizar la identificación, selección, factibilidad y preparación de proyectos de desarrollo municipal, sobre la base de normas, procedimientos y criterios establecidos para este propósito.<br /><br />
-            •	Participar en la elaboración de la matriz de proyectos de Inversión Pública del Plan Operativo Anual en coordinación con el/la responsable de SISIN WEB.<br /><br />
-            •	Coordinar de forma oportuna y eficiente las actividades y/o trabajo con las demás unidades dependientes del Gobierno Autónomo Municipal de Punata a objeto de tomar acciones técnicas, legales y/o administrativas concernientes a los intereses de la Institución.<br /><br />
-            •	Generar información gerencial en base al SIGEP, SISIN WEB Y SICOES.<br />
-
+           <h2> Dirección de Planificación  </h2>   <br />
+           <h3> Es responsable de:</h3> <br />
+           <ul> 
+            <li>	Dirigir la elaboración y actualización de planes municipales de mediano y largo plazo (PTDI, PEI, POA y OTROS) en cumplimiento a la planificación municipal y normativa vigente.</li> 
+            <li> Realizar la identificación, selección, factibilidad y preparación de proyectos de desarrollo municipal, sobre la base de normas, procedimientos y criterios establecidos para este propósito.</li>
+            <li>	Participar en la elaboración de la matriz de proyectos de Inversión Pública del Plan Operativo Anual en coordinación con el/la responsable de SISIN WEB.</li>
+            <li>	Coordinar de forma oportuna y eficiente las actividades y/o trabajo con las demás unidades dependientes del Gobierno Autónomo Municipal de Punata a objeto de tomar acciones técnicas, legales y/o administrativas concernientes a los intereses de la Institución.</li>
+            <li>	Generar información gerencial en base al SIGEP, SISIN WEB Y SICOES.</li>
+            </ul>
           </div>
         <div className="mision">Planificacion y estrategia de Gobierno Autónomo municipal de Punata</div>
         <div className="pdf-grid">

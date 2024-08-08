@@ -8,8 +8,9 @@ body {
   }
   
   /* Contenedor principal */
-  .v-wrapper {
+  .v-wrappers {
     padding: 0px;
+    margin-top: 3%;
   }
   
   .v-containerSer {

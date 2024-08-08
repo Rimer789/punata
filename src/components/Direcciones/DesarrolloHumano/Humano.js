@@ -4,6 +4,9 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { sliderSettings } from "../../../components/common";
 import datos from "../../../listas/colegios.json";
 import { FaBalanceScale, FaDollarSign, FaClipboardList } from "react-icons/fa";
+import servicio1Image from "./slim.jpg"; // Imagen para el primer servicio
+import servicio2Image from "./coslam.jpg"; // Imagen para el segundo servicio
+import defensoria from "./defensoria.jpg"
 
 
 
@@ -12,13 +15,20 @@ const DesarrolloHumano = () => {
     {
       title: "SERVICIO LEGAL INTEGRAL MUNICIPAL",
       description: "La Unidad del Servicio Legal Integral tiene como objeto las personas víctimas de todo tipo de violencia que establece la Ley 348 violencia con el fin de garantizar a las mujeres una vida digna y el ejerció pleno de sus derechos para vivir bien.",
-      link: "/slim"
+      link: "/slim",
+      image: servicio1Image
     },
     {
-      title: "CENTRO DE ORIENTACION SOCIO LEGAL PARA EL ADULTO MAOR (COSLAM) ",
+      title: "CENTRO DE ORIENTACION SOCIO LEGAL PARA EL ADULTO MAYOR (COSLAM)",
       description: "La Unidad del Centro Socio Legal para el Adulto Mayor, tiene como objeto las personas Adultas Mayores de 60 años, víctimas de todo tipo de violencia que establece la Ley 348 – la Ley 369, con el fin de garantizar una vida con dignidad y respeto, la protección contra todo forma de maltrato, discriminación en razón de edad, abandono y marginadad, el ejercicio pleno de sus derechos de las y los Adultos Mayores",
-      link: "/coslam"
-
+      link: "/coslam",
+      image: servicio2Image
+    },
+    {
+      title: "DEFENSORIA DE LA MINES Y ADOLECENCIA",
+      description: "la defensoria ",
+      link: "/defensoria",
+      image: defensoria
     },
     {
       title: "SOPORTE TÉCNICO DE SISTEMAS E INFORMÁTICA",
@@ -68,13 +78,14 @@ const DesarrolloHumano = () => {
       <div className="paddings innerWidth g-container">
         <div className="paddings innerWidth s-container">
           <div className="flexColStart r-head">
-            <span className="orangeText">UNIDADES EDUCATIVAS</span>
+            <br/>
+            <h2 >UNIDADES EDUCATIVAS</h2>
           </div>
           <Swiper {...sliderSettings}>
             <SlideNextButton />
             {datos.map((card, i) => (
               <SwiperSlide key={i} >
-                <div className="flexColStart r-cardss">
+                <div className="dir-card">
                   <span className="">
                     {card.unidad}
                   </span>
@@ -87,6 +98,11 @@ const DesarrolloHumano = () => {
                     {card.nivel}
                   </span>
                 </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
               </SwiperSlide>
             ))}
           </Swiper>
@@ -100,24 +116,25 @@ const ServiceCard = ({ servicio }) => {
   const [expanded, setExpanded] = useState(false);
 
   const toggleReadMore = () => {
-    setExpanded(!expanded);
+      setExpanded(!expanded);
   };
 
   return (
-    <div className="service-card">
-      {servicio.icon}
-      <h3>{servicio.title}</h3>
-      <p className={expanded ? "" : "collapsed"}>
-        {servicio.description}
-        {servicio.description.length > 100 && (
-          <span className="read-more" onClick={toggleReadMore}>
-            {expanded ? " Leer menos" : " Leer más"}
-          </span>
-        )}
-      </p>
-    </div>
+      <div className="service-card">
+          <img src={servicio.image} alt={servicio.title} className="service-image" />
+          <h3>{servicio.title}</h3>
+          <p className={expanded ? "" : "collapsed"}>
+              {servicio.description}
+              {servicio.description.length > 100 && (
+                  <span className="read-more" onClick={toggleReadMore}>
+                      {expanded ? " Leer menos" : " Leer más"}
+                  </span>
+              )}
+          </p>
+      </div>
   );
 };
+
 
 const SlideNextButton = () => {
   const swiper = useSwiper();

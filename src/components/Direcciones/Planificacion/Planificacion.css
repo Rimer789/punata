@@ -5,7 +5,10 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
   }
-  
+  .v-wrapperp {
+    padding: 0px;
+    background: #006400;
+}
   .director-container {
     margin-bottom: 30px;
     text-align: center;
@@ -110,7 +113,29 @@
     background-position: center;
     border-radius: 10px;
   }
+
+  .additional-content-ingre {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-left: 10%;
+    margin-right: 10%;
+  }
   
+  .additional-content-ingre h2, .additional-content-ingre h3, .additional-content-ingre h4, .additional-content-ingre h5 {
+    margin-top: 20px;
+  }
+  
+  .additional-content-ingre p, .additional-content-ingre ul, .additional-content-ingre ol {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+ .additional-content-ingre ul, .additional-content-ingre ol {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: 10%;
+  }
   
   
   .pdf-thumbnail{
@@ -141,6 +166,9 @@
   }
   .pdf-thumbnail-5 {
     background-image: url('./agenda.jpg');
+  }
+  .pdf-thumbnail-6 {
+    background-image: url('../../ini.png');
   }
   
   .pdf-name {

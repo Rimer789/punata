@@ -9,6 +9,7 @@ import pdf2 from "../components/Direcciones/Planificacion/PEI.pdf";
 import pdf3 from "../components/Direcciones/Planificacion/PTDI.pdf";
 import pdf4 from "../components/Direcciones/Planificacion/POA.pdf";
 import pdf5 from "../components/Direcciones/Planificacion/AGENDA.pdf";
+import pdf6 from "./INFORMEINICIALDEACTIVIDADESYPROYECTOS.pdf"
 
 const Informacion = () => {
   return (
@@ -48,41 +49,6 @@ const Informacion = () => {
           </a>
         </div>
       </div>
-      <div className="v-container22" id="concejo">
-        <div className="alcalde-container">
-          <div className="alcalde-title">Concejo Municipal</div>
-          <img
-            src={alcalde}
-            alt="Foto del alcalde"
-            className="concejo-img"
-          />
-          <img
-            src={alcalde}
-            alt="Foto del alcalde"
-            className="concejo-img"
-          />
-          <img
-            src={alcalde}
-            alt="Foto del alcalde"
-            className="concejo-img"
-          />
-          <img
-            src={alcalde}
-            alt="Foto del alcalde"
-            className="concejo-img"
-          />
-          <img
-            src={alcalde}
-            alt="Foto del alcalde"
-            className="concejo-img"
-          />
-          <img
-            src={alcalde}
-            alt="Foto del alcalde"
-            className="concejo-img"
-          />
-        </div>
-      </div>
       <div className="v-container3" id="mision">
         <div className="escudo-container">
           <img
@@ -91,24 +57,37 @@ const Informacion = () => {
             className="escudo-img"
           />
         </div>
-        <div className="mision">Misión</div>
-        <div className="descr-mision">
-          Satisfacer las necesidades y aspiraciones de desarrollo de la
-          población del municipio de Punata, direccionando los servicios
-          públicos municipales hacia la mejora de su calidad de vida, en un
-          contexto de transparencia, eficacia, eficiencia, calidad y
-          oportunidad.
-        </div>
-        <div className="vision">Visión</div>
-        <div className="descr-vision">
-          Convertir a Punata en un hogar seguro, próspero, limpio y competitivo,
-          articulando eficientemente el trabajo del Gobierno Autónomo Municipal
-          y la sociedad punateña. Ser un municipio atractivo para las
-          inversiones, con una infraestructura en armonía con la naturaleza, y
-          una población integrada e identificada con su municipio. Establecer un
-          entorno organizacional humano eficaz y transparente, donde la
-          participación ciudadana sea fundamental para el desarrollo sostenible
-          y la prosperidad de Punata.
+
+        <div className="additional-content-ingre">
+          <h2 >Misión</h2>
+          <p> El Gobierno Autónomo Municipal de Punata, es la entidad de derecho público con
+            personalidad jurídica reconocida y patrimonio propio, que representa al conjunto de
+            vecinos asentados en una jurisdicción territorial determinada, participa en la realización de
+            los fines del Estado, y cuyas finalidades son:
+          </p>
+          <ul>
+            <li>La satisfacción de las necesidades de la vida en la comunidad.</li>
+            <li>Buscar la integración y participación activa de las personas en la vida comunal.</li>
+            <li>Elevar los niveles de bienestar social y material de la comunidad, mediante la
+              ejecución directa o indirecta de servicios y obras públicas de interés común;</li>
+            <li>Promover el desarrollo de su jurisdicción territorial, a través de la formulación y
+              ejecución de planes, programas y proyectos concordantes con la planificación del
+              desarrollo nacional, departamental y regional.</li>
+            <li>Conservar, fomentar y difundir los valores culturales y las tradiciones cívicas de
+              la comunidad</li>
+            <li>Conservar los recursos naturales y el medio ambiente, así como resguardar el
+              ecosistema de su jurisdicción territorial.</li>
+
+          </ul>
+          <h2 >Visión</h2>
+          <p>
+            En el Marco de la Visión del Gobierno Autónomo Municipal de Punata, así como de las vocaciones
+            que posee, los esfuerzos del Gobierno Autónomo Municipal de Punata se orientarán a contribuir a
+            que se convierta en:
+            “Municipio eje de desarrollo del Valle Alto, con sistemas ecológico-productivos agropecuario,
+            comercial, industrial y turístico fortalecidos, con gestión municipal eficiente y desarrollo integral
+            sostenible
+          </p>
         </div>
       </div>
       <div className="v-container33" id="estrategia">
@@ -130,12 +109,18 @@ const Informacion = () => {
             <a href={pdf4} target="_blank" rel="noopener noreferrer">
               <div className="pdf-thumbnail pdf-thumbnail-4">PDF</div>
               <div className="pdf-name">PLAN OPERATIVO ANUAL GESTIÓN 2024</div>
-            </a>
+            </a> 
           </div>
           <div className="pdf-item">
             <a href={pdf5} target="_blank" rel="noopener noreferrer">
               <div className="pdf-thumbnail pdf-thumbnail-5">PDF</div>
               <div className="pdf-name">AGENDA URBANA PUNATA</div>
+            </a>
+          </div>
+          <div className="pdf-item">
+            <a href={pdf6} target="_blank" rel="noopener noreferrer">
+              <div className="pdf-thumbnail pdf-thumbnail-6">PDF</div>
+              <div className="pdf-name">INFORME INICIAL DE ACTIVIDADES Y PROYECTOS</div>
             </a>
           </div>
         </div>

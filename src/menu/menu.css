@@ -1,17 +1,12 @@
 
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, sans-serif;
 }
-
-
-/* Estilos del menú */
 .navbar {
     background-color: #006400;
     color: #fff;
@@ -26,7 +21,10 @@ body {
     align-items: center;
 	justify-content: space-between;
 }
-
+.navbar__logo img {
+    height: 50px;
+    width: 50px;
+}
 .navbar.hidden {
     top: -60px;
 }
@@ -53,7 +51,7 @@ body {
     padding: 10px ;
     display: block;
     transition: background-color 0.3s;
-    font-size: 12px;}
+    font-size: 14px;}
 
 .navbar__link:hover,
 .navbar__item.active .navbar__link {
@@ -102,8 +100,6 @@ body {
 
 
 }
-
-/* Estilos responsivos */
 @media (max-width: 768px) {
     .navbar__hamburger {
         display: block;

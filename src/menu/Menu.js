@@ -35,6 +35,8 @@ import './menu.css';
 import ScrollTop from './ScrollTop';
 import Slim from '../components/Direcciones/DesarrolloHumano/Slim';
 import Coslam from '../components/Direcciones/DesarrolloHumano/Coslam';
+import logo from './logo3p.png'
+import Defensoria from '../components/Direcciones/DesarrolloHumano/DefensoriaMi';
 
 const Menu = () => {
     const [menuActive, setMenuActive] = useState(false);
@@ -101,7 +103,9 @@ const Menu = () => {
                 <div className="navbar__hamburger" onClick={toggleMenu}>
                     &#9776;
                 </div>
-                <h3>G.A.M.P.</h3>
+                <div className="navbar__logo">
+                    <img src={logo} alt="G.A.M.P. logo" />
+                </div>
                 <ul className="navbar__menu">
                     <li className={`navbar__item ${location.pathname === '/' ? 'active' : ''}`} onClick={() => handleLinkClick('/')}>
                         <Link to="/" className="navbar__link">INICIO</Link>
@@ -112,9 +116,7 @@ const Menu = () => {
                             <li className="navbar__dropdown-item">
                                 <Link to="/informacion" className="navbar__dropdown-link" onClick={(e) => handleAnchorClick(e, 'alcalde')}>Alcalde</Link>
                             </li>
-                            <li className="navbar__dropdown-item">
-                                <Link to="/informacion" className="navbar__dropdown-link" onClick={(e) => handleAnchorClick(e, 'concejo')}>Concejo</Link>
-                            </li>
+                           
                             <li className="navbar__dropdown-item">
                                 <Link to="/informacion" className="navbar__dropdown-link" onClick={(e) => handleAnchorClick(e, 'mision')}>Misión Vision</Link>
                             </li>
@@ -159,7 +161,7 @@ const Menu = () => {
                         <Link to='/culturaturismo' className="navbar__link">CULTURA Y TURISMO</Link>
                     </li>
                     <li className={`navbar__item ${location.pathname === '/gastronomia' ? 'active' : ''}`} onClick={() => handleLinkClick('/gastronomia')}>
-                        <Link to='/gastronomia' className="navbar__link">SERVICIO DE RESTAURANTES</Link>
+                        <Link to='/gastronomia' className="navbar__link">GASTRONOMIA</Link>
                     </li>
                     <li className={`navbar__item ${location.pathname === '/noticias' ? 'active' : ''}`} onClick={() => handleLinkClick('/noticias')}>
                         <Link to='/noticias' className="navbar__link">NOTICIAS</Link>
@@ -206,6 +208,7 @@ const Menu = () => {
                     <Route path='/ServiciosSociales' element={<Servicios/>} />
                     <Route path='/slim' element={<Slim/>} />
                     <Route path='/coslam' element={<Coslam/>} />
+                    <Route path='/defensoria' element={<Defensoria/>}/>
 
 
                 </Routes>

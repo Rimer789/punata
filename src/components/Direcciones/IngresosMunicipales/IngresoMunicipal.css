@@ -1,0 +1,163 @@
+.v-wrapper-ingre {
+    background-color: #0064000c;
+    font-family: Arial, sans-serif;
+  }
+  
+  .boton-flotante-ingre {
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50px;
+  }
+  .escudo-imgi {
+    width: 800px; 
+    height: 400px;
+    object-fit: cover; 
+    margin-bottom: 10px;
+    border: 10px double aliceblue;
+  }
+  .escudo-imgd {
+    width: 800px; 
+    height: 500px;
+    object-fit: cover; 
+    margin-bottom: 10px;
+    border: 10px double aliceblue;
+  }
+  .boton-flotante-ingre a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+  .im-container-ingre {
+    margin-top: 20px;
+    background: #006400;
+
+  }
+  
+  .text-container-ingre {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .text-large-ingre {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .text-containeree-ingre {
+    margin-bottom: 20px;
+  }
+  
+  .descre-mision-ingre {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  .contacto-ingre {
+    margin-top: 20px;
+    
+  }
+  
+  .contacto-ingre .titulo-ingre {
+    font-weight: bold;
+  }
+  
+  .contacto-ingre .contenido-ingre {
+    margin-bottom: 10px;
+  }
+  
+  .additional-content-ingre {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  .additional-content-ingre h2, .additional-content-ingre h3, .additional-content-ingre h4, .additional-content-ingre h5 {
+    margin-top: 20px;
+  }
+  
+  .additional-content-ingre p, .additional-content-ingre ul, .additional-content-ingre ol {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+ .additional-content-ingre ul, .additional-content-ingre ol {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: 10%;
+  }
+
+   
+  .pdf-thumbnaili{
+    height: 150px;
+    content: "";
+    background-size: cover;
+    background-position: center;    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .pdf-thumbnaili-1 {
+    background-image: url('./ley112.png');
+  }
+  
+  .pdf-thumbnaili-2 {
+    background-image: url('./ley194.png');
+  }
+  
+  .pdf-thumbnailg{
+    height: 150px;
+    content: "";
+    background-size: cover;
+    background-position: center;    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .pdf-thumbnailg-1 {
+    background-image: url('./1.png');
+  }
+  
+  .pdf-thumbnailg-2 {
+    background-image: url('./2.png');
+  }
+  .pdf-thumbnailg-3 {
+    background-image: url('./3.png');
+  }
+  .pdf-thumbnailg-4 {
+    background-image: url('./4.png');
+  }
+  .pdf-thumbnailg-5 {
+    background-image: url('./5.png');
+  }
+  
+  @media (max-width: 768px) {
+    .text-large-ingre {
+      font-size: 20px;
+    }
+  
+    .descre-mision-ingre {
+      font-size: 16px;
+    }
+  
+    .additional-content-ingre {
+      padding: 15px;
+    }
+  
+    .boton-flotante-ingre {
+      bottom: 10px;
+      right: 10px;
+      padding: 8px 16px;
+    }
+  }
+  
